@@ -1,0 +1,9 @@
+1. `customize-cra`: 
+    - Cho phép bạn tùy chỉnh các cấu hình của Create React App (CRA) bằng cách sử dụng JavaScript. 
+    - Sử dụng customize-cra để thêm hoặc thay đổi các plugin, rules, loaders, plugins và các cấu hình khác của Webpack. 
+    - Nó cung cấp cho bạn một API để tùy chỉnh các cấu hình này một cách dễ dàng.
+    - Ghi đè cấu hình của webpack
+-----------------------------------------------------------------------------------------------------------------------------
+2. `Babel-plugin-module-resolver`:
+    - Một plugin Babel được sử dụng để tạo ra các alias (bí danh) đến các module hoặc file trong dự án của bạn. 
+    - Plugin này giúp cho việc import và require các module và file trong dự án trở nên đơn giản hơn

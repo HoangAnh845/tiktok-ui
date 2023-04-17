@@ -1,0 +1,17 @@
+{
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "alias": {
+          // Định nghĩa một alias có tên là "~" cho đường dẫn ./src.
+          // Alias này có thể được sử dụng trong mã nguồn của bạn để import hoặc require các module từ thư mục ./src bằng cách sử dụng "~" thay vì đường dẫn đầy đủ.
+          "~": "./src",
+          // Định nghĩa một alias có tên là "underscore" cho module lodash.
+          // Alias này có thể được sử dụng trong mã nguồn của bạn để import hoặc require module lodash bằng cách sử dụng "underscore" thay vì tên module đầy đủ
+          "underscore": "lodash"
+        }
+      }
+    ]
+  ]
+}
