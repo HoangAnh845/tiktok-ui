@@ -21,8 +21,6 @@ function App() {
             } else if (route.layout === null) {
               Layout = Fragment
             };
-            console.log("LOG__V____S__", route.layout);
-            console.log("LOG__V_____", Layout);
             // const Layout = route.layout === null ? Fragment : DefaultLayout;
             const Page = route.comment;
             return <Route key={index} path={route.path} element={

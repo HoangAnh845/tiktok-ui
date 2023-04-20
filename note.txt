@@ -7,5 +7,10 @@
 2. `Babel-plugin-module-resolver`:
     - Một plugin Babel được sử dụng để tạo ra các alias (bí danh) đến các module hoặc file trong dự án của bạn. 
     - Plugin này giúp cho việc import và require các module và file trong dự án trở nên đơn giản hơn
+-----------------------------------------------------------------------------------------------------------------------------
 3. `Normalize.css`: 
     - Bộ khung CSS giúp đồng bộ hóa phong cách hiển thị trên các trình duyệt khác nhau, giúp tránh được các sự khác biệt giữa các trình duyệt và đảm bảo rằng các phần tử HTML sẽ được hiển thị đúng cách trên mọi trình duyệt.
+-----------------------------------------------------------------------------------------------------------------------------
+4. `classnames`: 
+    - Là một package rất phổ biến trong cộng đồng React và cung cấp một cách để xử lý các class names (tên lớp) của các thành phần React một cách dễ dàng hơn. 
+        Đặc biệt là trong trường hợp các class names phải được đưa ra dưới dạng điều kiện hoặc được kết hợp với nhau.
