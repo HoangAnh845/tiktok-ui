@@ -1,4 +1,9 @@
 .wrapper {
+      --search-border-radius: 92px;
+      --search-height: 46px;
+      --search-top-spacer: 9px;
+      --search-button-width: 52px;
+
       width: 100%;
       height: var(--default-layout-header-height);
       box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
@@ -13,17 +18,95 @@
       align-items: center;
 }
 
-.logo {
+.search-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: rgba(22, 24, 35, 0.5);
+      padding: 5px 12px;
+}
+
+.search,
+.search-result {
+      width: 361px;
 }
 
 .search {
+      position: relative;
+      height: var(--search-height);
+      margin: 0 auto;
+      padding-left: 16px;
+      display: flex;
+      background-color: rgba(22, 24, 35, 0.06);
+      border-radius: var(--search-border-radius);
+
+      input {
+            flex: 1;
+            height: 100%;
+            color: var(--back);
+            font-size: 1.6rem;
+            border: none;
+            outline: none;
+            padding: 12px 0px;
+            caret-color: var(--primary);
+            background-color: transparent;
+      }
+
+      // Sử dụng để chọn tất cả các phần tử input không có placeholder được hiển thị (điều này có nghĩa là người dùng đã nhập dữ liệu vào input).
+      input:not(:placeholder-shown) ~ .search-btn {
+            color: rgba(22, 24, 35, 0.75);
+      }
+
+      &::after {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: calc(var(--search-height) - var(--search-top-spacer) * 2);
+            top: var(--search-top-spacer);
+            right: 52px;
+            background-color: rgba(22, 24, 35, 0.12);
+      }
+
+      &:focus-within {
+            // được kích hoạt khi một phần tử hoặc một phần tử con của nó đang được tập trung, bằng cách nhấp chuột hoặc sử dụng bàn phím để điều hướng trang web
+            border: 1.5px solid rgba(22, 24, 35, 0.2);
+      }
 }
 
-.clear {
-}
-
+.clear,
 .loading {
+      position: absolute;
+      right: 65px; // calc(--search-button-width + 16px)
+      top: 50%;
+      transform: translateY(-50%);
+      color: rgba(22, 24, 35, 0.06);
 }
 
 .search-btn {
+      width: 52px;
+      height: 100%;
+      border-top-right-radius: var(--search-border-radius);
+      border-bottom-right-radius: var(--search-border-radius);
+      font-size: 1.6rem;
+      color: rgb(22 24 35 / 34%);
+      cursor: pointer;
+
+      &:hover {
+            background-color: rgba(22, 24, 35, 0.033);
+      }
+
+      &:active {
+            background-color: rgba(22, 24, 35, 0.06);
+      }
+}
+
+.more-btn {
+      font-size: 2rem;
+      margin-left: 28px;
+      padding: 4px 8px;
+      background-color: transparent;
+      cursor: pointer;
+}
+
+.menu-items {
+      width: 224px;
 }
