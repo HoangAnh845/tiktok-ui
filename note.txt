@@ -14,3 +14,5 @@
 4. `classnames`: 
     - Là một package rất phổ biến trong cộng đồng React và cung cấp một cách để xử lý các class names (tên lớp) của các thành phần React một cách dễ dàng hơn. 
         Đặc biệt là trong trường hợp các class names phải được đưa ra dưới dạng điều kiện hoặc được kết hợp với nhau.
+5. Phân tích cấu trúc `Một đường dẫn tìm kiếm("// https://tiktok.fullstack.edu.vn/api/users/search?q=hoaa&type=less")`: 
+    - "q=hoaa&type=less" => định dạng "key1=value1 & key2=value2&..."

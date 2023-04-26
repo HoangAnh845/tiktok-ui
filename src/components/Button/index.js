@@ -44,9 +44,6 @@ function Button({ to, href,
         props.href = href;
         Comp = 'a';
     };
-    console.log("LOG___to___", to);
-    console.log("LOG__Comp___", Comp);
-    console.log("LOG____props.to___", props.to);
 
     const classes = cx('wrapper', {
         [className]: className,
