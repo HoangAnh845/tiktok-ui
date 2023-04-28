@@ -13,7 +13,7 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          {publicRoutes.map((route, index) => {
+          {publicRoutes.map((route, index) => { // Đường dẫn link web
             // Nếu không có Layout được set thì sẽ lấy Layout mặc định 
             let Layout = DefaultLayout;
             if (route.layout) {
@@ -21,8 +21,10 @@ function App() {
             } else if (route.layout === null) {
               Layout = Fragment
             };
+            // console.log("LOG____Layout___", Layout);
             // const Layout = route.layout === null ? Fragment : DefaultLayout;
-            const Page = route.comment;
+            const Page = route.component;
+            // console.log("LOG__V______", Page)
             return <Route key={index} path={route.path} element={
               <Layout children={<Page />}></Layout>
             } />

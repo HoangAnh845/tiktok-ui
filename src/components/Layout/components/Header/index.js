@@ -1,5 +1,5 @@
-import Tippy from '@tippyjs/react/headless'; // different import path!
-import 'tippy.js/dist/tippy.css';
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css'; // optional
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -20,6 +20,8 @@ import images from '~/assets/images';
 import Menu from '~/components/Popper/Menu';
 import Image from "~/components/Image";
 import Search from '~/components/Layout/components/Search';
+import { Link } from 'react-router-dom';
+import config from '~/config';
 
 // Hàm bind() trong classNames cho phép bạn ràng buộc một đối tượng vào tên lớp. 
 // Trong trường hợp này, đối tượng được ràng buộc là "styles". Điều này có nghĩa là khi bạn gọi hàm cx() sau này, nó sẽ tự động thêm tiền tố "styles" vào tên lớp bạn truyền vào.
@@ -102,8 +104,7 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <img src={images.logo} alt='Logo tiktok' />
-
+                <Link to={config.routes.home} ><img src={images.logo} alt='Logo tiktok' /></Link>
                 {/* Search */}
                 {<Search />}
 

@@ -13,7 +13,7 @@ const cx = classNames.bind(styles);
 
 const defaultFn = () => { }
 
-function Menu({ children, items = [], onChange = defaultFn }) { // Nếu không có gì truyền vào tham số của hàm thì sẽ lấy giá trị của mặc định của tham số đã gán
+function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn }) { // Nếu không có gì truyền vào tham số của hàm thì sẽ lấy giá trị của mặc định của tham số đã gán
 
     const [history, setHistory] = useState([{ data: items }]);
     const current = history[history.length - 1];
@@ -36,6 +36,7 @@ function Menu({ children, items = [], onChange = defaultFn }) { // Nếu không 
             delay={[0, 7000]}
             interactive
             placement='bottom-end'
+            hideOnClick={hideOnClick} // Quyết định khi click có ẩn tippy đi hay không 
             render={(attrs) => (
                 <div className={cx('menu-list')} tabIndex="-1" {...attrs}>
                     <PopperWrapper className={cx('menu-popper')}>
