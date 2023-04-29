@@ -33,7 +33,7 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn 
 
     return (
         <Tippy
-            delay={[0, 7000]}
+            delay={[0, 1500]}
             interactive
             placement='bottom-end'
             hideOnClick={hideOnClick} // Quyết định khi click có ẩn tippy đi hay không 
@@ -45,7 +45,7 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn 
                             // Cắt phần tử cuối để quay về cấp 1 
                             setHistory((prev) => prev.slice(0, prev.length - 1))
                         }} />}
-                        {renderItems()}
+                        <div className={cx("menu-body")}>{renderItems()}</div>
                     </PopperWrapper>
                 </div>
             )}
