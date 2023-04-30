@@ -1,6 +1,6 @@
 import { faCircleXmark, faSpinner, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import React, { useEffect, useState, useRef } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import HeadlessTippy from '@tippyjs/react/headless';
 import classNames from 'classnames/bind';
@@ -10,7 +10,7 @@ import * as searchServices from '~/services/searchService';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '~/components/AccountItem';
 import { useDebounce } from '~/hooks';
-import * as request from "~/utils/request"
+// import * as httpRequest from "~/utils/httpRequest"
 
 // Hàm bind() trong classNames cho phép bạn ràng buộc một đối tượng vào tên lớp. 
 // Trong trường hợp này, đối tượng được ràng buộc là "styles". Điều này có nghĩa là khi bạn gọi hàm cx() sau này, nó sẽ tự động thêm tiền tố "styles" vào tên lớp bạn truyền vào.
@@ -24,14 +24,14 @@ function Search() {
     const [showResult, setShowResult] = useState(true); // quyết định xem kết quả tìm kiếm có nên hiển thị hay không.
     const [loading, setLoading] = useState(false); // quyết định xem nút loading có nên hiển thị hay không.
 
-    // Lần đầu debounced sẽ nhận giá trị là chuỗi rỗng 
+    // Lần đầu debouncedValue sẽ nhận giá trị là chuỗi rỗng 
     // Các lần tiếp theo sẽ nhận giá trị khi người dùng gõ 
-    const debounced = useDebounce(searchValue, 500); // Dùng để delay gửi rì quét lên api tránh trường hợp tìm kiếm từng từ bị rì quét liên tục 
+    const debouncedValue = useDebounce(searchValue, 500); // Dùng để delay gửi rì quét lên api tránh trường hợp tìm kiếm từng từ bị rì quét liên tục 
 
     useEffect(() => { // Hành động cần thực hiện: thực thi sau khi component được render hoặc một giá trị trong component thay đổi.
 
         // Kiểm tra nếu giá trị từ khóa được nhập vào mà = rỗng thì sẽ không lấy api 
-        if (!debounced.trim()) {
+        if (!debouncedValue.trim()) {
             // setSearchResult([])
             return
         }
@@ -39,7 +39,7 @@ function Search() {
         const fetchApi = async () => {
             setLoading(true);
 
-            const result = await searchServices.search(debounced); // data api lấy được             
+            const result = await searchServices.search(debouncedValue); // data api lấy được             
             setSearchResult(result);
 
             setLoading(false);
@@ -48,12 +48,12 @@ function Search() {
             //         /* 
             //             ${
             //                 //dùng để mã hóa các ký tự không an toàn trong URL. VD: "&", "=", "?" và "+",...
-            //                 encodeURIComponent(debounced)
+            //                 encodeURIComponent(debouncedValue)
             //             } &type=less
             //         */
 
             //         params: {
-            //             q: debounced,
+            //             q: debouncedValue,
             //             type: 'less'
             //         }
             //     });
@@ -79,7 +79,7 @@ function Search() {
     },
         // Một mảng các phụ thuộc (dependencies)
         // Nếu các giá trị trong mảng này thay đổi, useEffect sẽ được gọi lại.
-        [debounced]
+        [debouncedValue]
     );
 
     // Tạo một tham chiếu (reference) tới một phần tử trên giao diện người dùng

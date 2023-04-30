@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // Routes là một component cha chứa nhiều Route components, và được sử dụng để định nghĩa các tuyến đường cho ứng dụng.
 // Route là một component con của Routes, được sử dụng để định nghĩa một tuyến đường cụ thể, và xác định component được hiển thị khi tuyến đường đó được truy cập.
 import { publicRoutes } from '~/routes/index.js'
-import { DefaultLayout } from '~/components/Layout/DefaultLayout';
+import DefaultLayout from '~/layouts/DefaultLayout';
 // import { HeaderOnly } from './components/Layout/HeaderOnly';
 import { Fragment } from 'react';
 

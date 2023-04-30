@@ -14,8 +14,26 @@
 4. `classnames`: 
     - Là một package rất phổ biến trong cộng đồng React và cung cấp một cách để xử lý các class names (tên lớp) của các thành phần React một cách dễ dàng hơn. 
         Đặc biệt là trong trường hợp các class names phải được đưa ra dưới dạng điều kiện hoặc được kết hợp với nhau.
+-----------------------------------------------------------------------------------------------------------------------------
 5. Phân tích cấu trúc `Một đường dẫn tìm kiếm("// https://tiktok.fullstack.edu.vn/api/users/search?q=hoaa&type=less")`: 
     - "q=hoaa&type=less" => định dạng "key1=value1 & key2=value2&..."
+-----------------------------------------------------------------------------------------------------------------------------
 6. Thư viện `Axios`: 
     - Được sử dụng để gửi các yêu cầu HTTP từ một ứng dụng web hoặc mobile đến một server và xử lý phản hồi từ server.
     - Hỗ trợ nhiều phương thức HTTP như GET, POST, PUT, DELETE, PATCH, vv. Thư viện này có thể được sử dụng để tương tác với các API, tải xuống các tệp, và gửi các yêu cầu tùy chỉnh.
+-----------------------------------------------------------------------------------------------------------------------------
+7. Tệp `.env.local`: 
+        - Được sử dụng để cung cấp giá trị biến môi trường cho môi trường phát triển của bạn, đây là môi trường mà bạn sử dụng để phát triển ứng dụng của mình trước khi triển khai nó lên môi trường sản phẩm. 
+        - Các biến môi trường được đặt trong tệp này sẽ chỉ có tác dụng trong môi trường phát triển của bạn.
+   Tệp `.env.development`: 
+        - Được sử dụng để đặt các biến môi trường cho môi trường phát triển của bạn, giống như tệp .env.local, nhưng được đặt riêng cho quản lý và dễ quản lý hơn. 
+        - Tệp này sẽ chỉ có tác dụng trong môi trường phát triển của bạn.
+-----------------------------------------------------------------------------------------------------------------------------
+8. `PropTypes`: 
+    - Được sử dụng để kiểm tra các props được truyền vào cho các thành phần của bạn. PropTypes giúp bạn định nghĩa kiểu dữ liệu chính xác mà bạn mong đợi cho các props của một thành phần và cảnh báo lỗi nếu props được truyền vào không phù hợp với kiểu dữ liệu đó.
+-----------------------------------------------------------------------------------------------------------------------------
+9. Phím tắt trỏ xuống nhiều dòng: 
+    option + command + mũi tên xuống
+-----------------------------------------------------------------------------------------------------------------------------
+10. Trỏ con chuột vào ví trị chỉ định: 
+    option + con chuột

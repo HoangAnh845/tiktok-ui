@@ -1,4 +1,3 @@
-
 // Đoạn mã này là một functional component trong ReactJS, được sử dụng để render một ảnh với một fallback nếu ảnh không tải được.
 import PropTypes from 'prop-types'; //để kiểm tra kiểu dữ liệu của props được truyền vào component.
 import {
