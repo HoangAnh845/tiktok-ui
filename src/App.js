@@ -1,5 +1,6 @@
 // Sử dụng chúng trong ứng dụng React của mình để tạo và quản lý các tuyến đường của trang web
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 // BrowserRouter được định danh (alias) như là Router, nó là một component sử dụng cho routing trong React, cung cấp một giao diện đơn giản để định nghĩa và quản lý các đường dẫn URL trong ứng dụng.
 // Routes là một component cha chứa nhiều Route components, và được sử dụng để định nghĩa các tuyến đường cho ứng dụng.
 // Route là một component con của Routes, được sử dụng để định nghĩa một tuyến đường cụ thể, và xác định component được hiển thị khi tuyến đường đó được truy cập.
@@ -7,6 +8,7 @@ import { publicRoutes } from '~/routes/index.js'
 import DefaultLayout from '~/layouts/DefaultLayout';
 // import { HeaderOnly } from './components/Layout/HeaderOnly';
 import { Fragment } from 'react';
+
 
 function App() {
   return (

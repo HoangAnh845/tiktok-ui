@@ -104,7 +104,9 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <Link to={config.routes.home} ><img src={images.logo} alt='Logo tiktok' /></Link>
+                <Link to={config.routes.home} >
+                    <img src={images.logo} alt='Logo tiktok' />
+                </Link>
                 {/* Search */}
                 {<Search />}
 
